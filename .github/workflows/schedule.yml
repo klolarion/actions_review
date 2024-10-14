@@ -1,7 +1,7 @@
-name: "Schedule 15min 작동시키기"
+name: "스케줄로 작동시키기"
 
-on: 
-  schedult:
+on:
+  schedule:
     - cron: '0 * * * *'
     - cron: '15 * * * *'
     - cron: '30 * * * *'
@@ -22,6 +22,6 @@ jobs:
             github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: '15min Schedule 작성',
-              body: '15min Schedule 작성하였습니다'
+              title: '스케줄 작성',
+              body: '15분마다 스케줄로 작성하였습니다'
             })
