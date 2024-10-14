@@ -1,6 +1,9 @@
-name: "Push 작동시키기"
+name: "Push(Main) 작동시키기"
 
-on: [push]
+on: 
+  push:
+    branch:
+      main
 
 permissions:
   contents: write
@@ -17,6 +20,6 @@ jobs:
             github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: 'Push 작성',
-              body: 'Push 작성하였습니다'
+              title: 'Push 작성(Main)',
+              body: 'Push 작성하였습니다(Main)'
             })
