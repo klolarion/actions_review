@@ -2,7 +2,7 @@ name: "수동으로 작동시키기"
 
 on: 
   push:
-    branchs:
+    branches:
       - main
 
 permissions:
