@@ -4,8 +4,8 @@ on:
   push:
     branchs:
       - main
-    paths:
-      - "**/*.md" 
+    # paths:
+    #   - "**/*.md" 
 
 permissions:
   contents: write
