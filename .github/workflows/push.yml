@@ -3,7 +3,7 @@ name: "Push(Main) 작동시키기"
 on: 
   push:
     branch:
-      main
+      - main
 
 permissions:
   contents: write
