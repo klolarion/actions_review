@@ -1,27 +1,27 @@
-name: "스케줄로 작동시키기"
+# name: "스케줄로 작동시키기"
 
-on:
-  schedule:
-    - cron: '0 * * * *'
-    - cron: '15 * * * *'
-    - cron: '30 * * * *'
-    - cron: '45 * * * *'
+# on:
+#   schedule:
+#     - cron: '0 * * * *'
+#     - cron: '15 * * * *'
+#     - cron: '30 * * * *'
+#     - cron: '45 * * * *'
 
-permissions:
-  contents: write
-  issues: write
+# permissions:
+#   contents: write
+#   issues: write
 
-jobs:
-  create-issue:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Create issue
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: '스케줄 작성',
-              body: '15분마다 스케줄로 작성하였습니다'
-            })
+# jobs:
+#   create-issue:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Create issue
+#         uses: actions/github-script@v6
+#         with:
+#           script: |
+#             github.rest.issues.create({
+#               owner: context.repo.owner,
+#               repo: context.repo.repo,
+#               title: '스케줄 작성',
+#               body: '15분마다 스케줄로 작성하였습니다'
+#             })
